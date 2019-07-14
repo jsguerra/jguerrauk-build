@@ -1,107 +1,202 @@
-section {
-  background-color: $color-1;
-  padding: cre(80px) cre(20px);
-
-  &:nth-child(odd) {
-    background-color: transparent;
-  }
-
-  h2 {
-    text-align: center;
-  }
-
-  >.container {
-    max-width: 612px;
-  }
-}
-
-// About Section
-// =============================
+// About me section
+// =========================
 .about-me {
+  padding: cre(100px) 0;
 
-}
-
-// Skills Section
-// =============================
-.skill-sets {
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   h2 {
+    display: inline-block;
+    padding-bottom: 1rem;
+    position: relative;
+    margin-bottom: cre(40px);
+
+    &::after {
+      content: '';
+      background-color: $color-5;
+      width: 60%;
+      height: 4px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  p {
+    margin-bottom: cre(40px);
+  }
+
+  .about-me-left {
+    max-width: 46%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-me-right {
+    max-width: 46%;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-color: $color-2;
+      width: 160%;
+      height: calc(100% - 100px);
+      position: absolute;
+      top: 50%;
+      right: -10%;
+      transform: translateY(-50%);
+    }
+
+    .profile-image {
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+.section-title {
+  display: inline-block;
+  padding-bottom: 1rem;
+  position: relative;
+
+  &::after {
+    content: '';
+    background-color: $color-5;
+    width: 60%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+// My skills section
+// =========================
+.skills {
+  background-color: $color-2;
+  padding: cre(80px) 0;
+  text-align: center;
+
+  > p {
     margin-bottom: cre(40px);
   }
 
   .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
 
-    > p:first-child {
-      text-align: center;
+  .skills-left,
+  .skills-right {
+    width: 100%;
+    max-width: 45%;
+  }
+
+  .skills-left {
+
+  }
+
+  .skills-right {
+
+  }
+
+  .skills-item {
+    margin-bottom: cre(30px);
+
+    .skills-label {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin-bottom: cre(4px);
+
+      .skills-name {}
+      .skills-percent {}
+    }
+
+    .skills-bar {
+      background-color: $color-4;
+      width: 100%;
+      height: cre(8px);
+      position: relative;
+
+      &::before {
+        content: '';
+        background-color: $color-5;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.html {
+        
+        &::before {
+          width: 95%;
+        }
+      } // .html
+
+      &.css {
+        
+        &::before {
+          width: 85%;
+        }
+      } // .css
+
+      &.sass {
+        
+        &::before {
+          width: 90%;
+        }
+      } // .sass
+
+      &.js {
+        
+        &::before {
+          width: 80%;
+        }
+      } // .js
+
+      &.jquery {
+        
+        &::before {
+          width: 80%;
+        }
+      } // .jquery
+
+      &.wordpress {
+        
+        &::before {
+          width: 85%;
+        }
+      } // .wordpress
     }
   }
 }
 
-.skillbar {
-  background-color: $color-3;
-  margin-bottom: cre(20px);
-
-  .skill {
-    padding: cre(10px) 0;
-    overflow: hidden;
-    transition: 0.5s ease;
-
-    span {
-      font-size: 0.9rem;
-      background-color: darken($html-color, 10%);
-      color: white;
-      padding: cre(16px) cre(20px);
-    }
-  }
-}
-
-.html {
-  background-color: $html-color;
-  width: 90%;
-}
-
-.css {
-  background-color: $css-color;
-  width: 80%;
-}
-
-.sass {
-  background-color: $sass-color;
-  width: 85%;
-}
-
-.javascript {
-  background-color: $js-color;
-  width: 75%;
-}
-
-.jquery {
-  background-color: $jquery-color;
-  width: 75%;
-}
-
-
-// Projects Section
-// =============================
+// Projects section
+// =========================
 .projects {
-
-  .container {
-    max-width: 1100px;
-  }
+  padding: cre(80px) 0;
+  text-align: center;
 }
 
-.project-items {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-
-  .project-item {
-    flex: 1;
-    max-width: 250px;
-
-    img {
-      max-width: 250px;
-      height: auto;
-    }
-  }
+// Brand Logos section
+// =========================
+.brands {
+  @extend .container;
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 1;
 }

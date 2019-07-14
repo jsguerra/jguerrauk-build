@@ -80,3 +80,10 @@ h6 {
   line-height: $h6-line-height;
   margin-bottom: $h6-margin;
 }
+
+// Images
+// ==============
+img {
+  max-width: 100%;
+  height: auto;
+}

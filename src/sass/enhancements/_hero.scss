@@ -1,137 +1,52 @@
 .hero-treatment {
-  padding: cre(130px) 0 cre(80px);
+  background-image: url('/images/jose-guerra-front-end-developer.jpg');
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.45), rgba(0,0,0,0.5));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
   .container {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
+    height: 100%;
   }
 
   .welcome {
-    max-width: 48%;
+    color: white;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
 
     .support-text {
+      font-family: $font-family-1;
       display: block;
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: lighten($body-color, 15%);
-      margin-bottom: cre(5px);
+      font-size: 1.4rem;
+      text-shadow: 1px 2px 10px rgba(0,0,0,0.45);
     }
 
     .lead-title {
-      font-size: cre(70px);
-      line-height: 1;
-      margin-bottom: cre(10px);
+      font-size: cre(90px);
+      color: $color-5;
+      line-height: 1.2;
+      margin-bottom: 0;
+      text-shadow: 1px 2px 10px rgba(0,0,0,0.45);
     }
 
     .lead-text {
-      font-size: 1.3rem;
-      font-weight: 500;
-      color: lighten($body-color, 10%);
-      line-height: 1.4;
-    }
-
-    .lead-background {
-      display: none;
       font-family: $font-family-1;
-      font-size: cre(50px);
-      font-weight: 700;
-      line-height: 1;
-      opacity: 0.1;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate3d(0,-50%,0);
-      transition: 0.5s ease;
-      width: 100%;
-      z-index: -1;
+      font-size: 1.5rem;
+      text-shadow: 1px 2px 10px rgba(0,0,0,0.45);
+      margin-bottom: cre(40px);
     }
-  }
-
-  .profile-image {
-    max-width: 48%;
-    position: relative;
-
-    img {
-      max-width: 100%;
-    }
-
-    svg {
-      width: cre(600px);
-      max-width: 100%;
-    }
-  }
-}
-
-// SVG Animation
-// =====================================
-.computer {
-
-  // Default Styles
-  // =============================
-  .cls-1{isolation:isolate;}
-  .cls-2{fill:#d6953e;}
-  .cls-3{fill:#b57b35;}
-  .cls-4{fill:#868689;}
-  .cls-5{fill:#6d6d6d;}
-  .cls-6{fill:#c5c4d7;}
-  .cls-7{fill:#a5a5ad;}
-  .cls-8{fill:#172f47;}
-  .cls-9{fill:#202739;}
-  .cls-10{fill:#a7a6bb;}
-  .cls-11{fill:#fefefe;}
-  .cls-12{fill:#fd7c3a;}
-  .cls-13{fill:#004db9;}
-  .cls-14{
-    fill:#d3d3d3;
-    mix-blend-mode:multiply;
-  }
-  .cls-15{fill:#adadad;}
-  .cls-16{fill:#e4e4ef;}
-}
-
-.programmer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 90%;
-
-  // Default Styles
-  // =====================
-  .cls-1{isolation:isolate;}
-  .cls-2{fill:#c5c4d7;}
-  .cls-3{fill:#897762;}
-  .cls-4{fill:#331d0b;}
-  .cls-5{fill:#635140;}
-  .cls-6{fill:#edac7c;}
-  .cls-7{fill:#f7a588;}
-  .cls-8{fill:#cf9166;}
-  .cls-9{fill:#b57223;}
-  .cls-10{fill:#004db9;}
-  .cls-11{fill:#39748e;}
-  .cls-12{fill:#285c77;}
-  .cls-13 {
-    fill:#77bfd8;
-    mix-blend-mode:multiply;
-  }
-  .cls-14{fill:#202739;}
-
-  // Targated Styles
-  // ==========================
-  .gear-large {
-    width: 141px;
-    height: 141px;
-    animation: spin 4s linear infinite;
-  }
-}
-
-// Key Frames
-// =================
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
