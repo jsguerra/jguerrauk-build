@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#1843c1" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1843c1">
 
-    <title>Joe Bloggs: London Font-end Developer</title>
+    <title>Jos&eacute; Guerra: London Font-end Developer</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700" rel="stylesheet"> 
@@ -21,11 +21,11 @@
   <body>
     <header id="master-header">
       <div class="container">
-          <span id="site-logo">JB.</span>
+          <span id="site-logo">JG.</span>
           <ul class="social-links">
-            <li>github</li>
-            <li>codepen</li>
-            <li>linkedin</li>
+            <li><a class="icon github" href="https://github.com/jsguerra" target="_blank">github</a></li>
+            <li><a class="icon codepen" href="https://github.com/jsguerra" target="_blank">codepen</a></li>
+            <li><a class="icon linkedin" href="https://github.com/jsguerra" target="_blank">linkedin</a></li>
           </ul>
       </div>
     </header>
@@ -35,87 +35,93 @@
         <div class="container">
           <div class="welcome">
             <span class="support-text">Hello my name is</span>
-            <h1 class="lead-title">Joe Bloggs</h1>
+            <h1 class="lead-title">Jos&eacute; Guerra</h1>
             <p class="lead-text">I am a Front End Developer based in London</p>
             <p><a class="button-cta" href="#">Contact Me</a></p>
           </div>
-          <figure class="profile-image">
-            <img src="images/front-end-web-developer.png" alt="I am a developer" />
-          </figure>
         </div>
       </div>
 
-      <section class="about-me">
-        <h2>About Me</h2>
+      <div class="about-me">
         <div class="container">
-          <p>I am a front end web developer who specializes in WCAG Accessible web development. I have been developing websites professionally since 2008. Initially specializing in WordPress theme development and then moving on to bespoke development based on client brand guidelines.</p>
-        </div>
-      </section>
-
-      <section class="skill-sets">
-        <h2>My Skills</h2>
-        <div class="container">
-          <p>My core skills and proficiencies</p>
-          <div class="skillbar">
-            <div class="skill html"><span>HTML5</span></div>
+          <div class="about-me-left">
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed justo eros. Donec sollicitudin elementum pellentesque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras id eleifend enim. Vivamus fringilla nisi eu neque porttitor tristique.</p>
+            <a class="button-more" href="#">Learn More</a>
           </div>
-
-          <div class="skillbar">
-            <div class="skill css"><span>CSS3</span></div>
-          </div>
-
-          <div class="skillbar">
-            <div class="skill sass"><span>SASS</span></div>
-          </div>
-
-          <div class="skillbar">
-            <div class="skill javascript"><span>JavaScript</span></div>
-          </div>
-
-          <div class="skillbar">
-            <div class="skill jquery"><span>jQuery</span></div>
+          <div class="about-me-right">
+            <figure class="profile-image">
+              <img src="images/about-jose-guerra.jpg" alt="Jose Guerra front end developer" />
+            </figure>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section>
-        <h2>Technologies I use</h2>
+      <section class="skills">
+        <h2 class="section-title">My Skills</h2>
+        <p>A description of my skills</p>
         <div class="container">
-          <ul>
-            <li>Webpack</li>
-            <li>Gulp</li>
-            <li>Git</li>
-            <li>Photoshop</li>
-            <li>Sketch</li>
-            <li>WordPress</li>
-          </ul>
+          <div class="skills-left">
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">HTML5</span>
+                <span class="skills-percent">95%</span>
+              </div>
+              <div class="skills-bar html"></div>
+            </div>
+
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">CSS3</span>
+                <span class="skills-percent">85%</span>
+              </div>
+              <div class="skills-bar css"></div>
+            </div>
+
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">SASS</span>
+                <span class="skills-percent">90%</span>
+              </div>
+              <div class="skills-bar sass"></div>
+            </div>
+          </div>
+          <div class="skills-right">
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">Javascript</span>
+                <span class="skills-percent">80%</span>
+              </div>
+              <div class="skills-bar js"></div>
+            </div>
+
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">jQuery</span>
+                <span class="skills-percent">80%</span>
+              </div>
+              <div class="skills-bar jquery"></div>
+            </div>
+
+            <div class="skills-item">
+              <div class="skills-label">
+                <span class="skills-name">WordPress</span>
+                <span class="skills-percent">85%</span>
+              </div>
+              <div class="skills-bar wordpress"></div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="projects">
-        <h2>Projects</h2>
-        <div class="container">
-          <p>Projects I'm proud of</p>
-          <div class="project-items">
-            <figure class="project-item">
-              <img src="https://picsum.photos/id/1/300/300" />
-              <figcaption>This is a caption</figcaption>
-            </figure>
-            <figure class="project-item">
-              <img src="https://picsum.photos/id/1011/300/300" />
-              <figcaption>This is a caption</figcaption>
-            </figure>
-            <figure class="project-item">
-              <img src="https://picsum.photos/id/1005/300/300" />
-              <figcaption>This is a caption</figcaption>
-            </figure>
-            <figure class="project-item">
-              <img src="https://picsum.photos/id/1015/300/300" />
-              <figcaption>This is a caption</figcaption>
-            </figure>
-          </div>
-        </div>
+        <h2 class="section-title">Projects</h2>
+        <p>Projects I liked</p>
       </section>
+
+      <div class="brands">
+        <p>A collection of brand logos here</p>
+      </div>
 
       <footer id="master-footer">
         <p>&copy; 2019 Jose Guerra: Front End Developer</p>
