@@ -11,7 +11,8 @@ jQuery(function($) {
   HOME = {
 
     init: function() {
-      this.headerOpacity();
+      this.headerOpacity(),
+      this.scrollDown();
     },
 
     // Header Opacity Transition
@@ -26,6 +27,16 @@ jQuery(function($) {
         } else {
           $('#master-header').removeClass('darken');
         }
+      });
+    },
+
+    // Hero Scroll Down Arrow
+    // ==============================================
+    scrollDown: function() {
+      $(".scroll-down").click(function() {
+        $('html, body').animate({
+            scrollTop: $(".about-me").offset().top
+        }, 1000);
       });
     }
 
