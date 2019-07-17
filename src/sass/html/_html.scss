@@ -39,6 +39,38 @@ body {
   margin: 0 auto;
 }
 
+.scroll-up {
+  font-size: 0;
+  background-color: $color-5;
+  border: 2px solid $color-5;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: cre(40px);
+  right: cre(40px);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  transform: scale(1);
+  transition: 0.3s ease;
+  z-index: 2;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &::before {
+    content: '';
+    font-size: cre(18px);
+    @include font-icon('\e903');
+    color: $color-5;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 // Headings
 // ====================
 h1, h2, h3, h4, h5, h6 {
