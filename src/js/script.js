@@ -13,7 +13,8 @@ jQuery(function($) {
     init: function() {
       this.headerOpacity(),
       this.scrollDown(),
-      this.scrollUp();
+      this.scrollUp(),
+      this.animations();
     },
 
     // Header Opacity Transition
@@ -39,7 +40,7 @@ jQuery(function($) {
       $(".scroll-down").on('click', function() {
         $('html, body').animate({
             scrollTop: $(".about-me").offset().top
-        }, 1000);
+        }, 1500);
       });
     },
 
@@ -53,8 +54,15 @@ jQuery(function($) {
             scrollTop: 0
         }, 1000);
       });
-    }
+    },
 
+    // Animate on scroll library
+    // ==============================================
+    animations: function() {
+      AOS.init({
+        duration: 1000
+      });
+    }
   };
   
   HOME.init();
