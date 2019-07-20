@@ -12,6 +12,7 @@ jQuery(function($) {
 
     init: function() {
       this.headerOpacity(),
+      this.heroParallax(),
       this.scrollDown(),
       this.scrollUp(),
       this.animations();
@@ -30,6 +31,36 @@ jQuery(function($) {
           $('#master-header').removeClass('darken');
         }
       });
+    },
+
+    // Hero Treatment Parallax
+    // ==============================================
+    heroParallax: function() {
+      // Variables
+      var heroImage = document.querySelector(".hero-background");
+      var xScrollPosition;
+      var yScrollPosition;
+ 
+      // CSS Translate3d function
+      function setTranslate(xPos, yPos, el) {
+       el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+      }
+
+      // Parallax scroll function
+      function scrollLoop() {
+        xScrollPosition = window.scrollX;
+        yScrollPosition = window.scrollY;
+       
+        setTranslate(0, yScrollPosition * -0.3, heroImage);
+       
+        requestAnimationFrame(scrollLoop);
+      }
+
+      // Window event listener on scroll
+      window.addEventListener("scroll", scrollLoop, false);
+
+      // Using Smooth Scroll for websites
+      SmoothScroll({ stepSize: 80 });
     },
 
     // Hero Scroll Down Arrow
