@@ -45,13 +45,18 @@ body {
   border: 2px solid $color-5;
   width: 40px;
   height: 40px;
-  position: absolute;
+  position: fixed;
   bottom: cre(40px);
   right: cre(40px);
   box-shadow: 0 0 5px 0 rgba(0,0,0,0.1);
+  opacity: 0;
   transform: scale(1);
   transition: 0.3s ease;
   z-index: 2;
+
+  &.view {
+    opacity: 1;
+  }
 
   &:focus,
   &:hover {
