@@ -15,8 +15,9 @@ jQuery(function($) {
       this.heroParallax(),
       this.scrollDown(),
       this.scrollUp(),
-      this.wayPoints(),
-      this.animations();
+      this.animations(),
+      this.mySkills(),
+      this.projectItem();
     },
 
     // Header Opacity Transition
@@ -26,7 +27,7 @@ jQuery(function($) {
           $heroSeventy = $heroHeight * 0.7,
           $heroHeightBelow = $heroHeight * 0.5;
 
-      $(window).on('scroll', function() {
+      $(window).on('load scroll', function() {
         if ($(document).scrollTop() > $heroSeventy && $(this).width() >= 600) {
           $('#master-header').addClass('darken');
         } else {
@@ -95,23 +96,49 @@ jQuery(function($) {
       });
     },
 
-    // Scroll Up Button
-    // ==============================================
-    wayPoints: function() {
-      var $skills = $('.skills');
-      
-      $skills.waypoint(function() {
-        console.log('I see you')
-      }, { offset: '50%'});
-    },
-
     // Animate on scroll library
     // ==============================================
     animations: function() {
       AOS.init({
         duration: 1000
       });
+    },
+
+    // Add waypoints to skills section
+    // ==============================================
+    mySkills: function() {
+      var $skills = $('.skills');
+      
+      $skills.waypoint(function() {
+        $('.skills-bar').addClass('animate-skill');
+      }, { offset: '50%'});
+    },
+
+    // Project function
+    // ==============================================
+    projectItem: function() {
+      var $projectItem = $('.project-item');
+
+      $projectItem.on('click', function() {
+        var $this = $(this);
+        var $itemPostiion = $this.offset();
+
+        $this.css('position', 'absolute').animate({
+          top: 0,
+          left: 0
+        });
+
+        setTimeout(function() {
+          $this.toggleClass('expand');
+        }, 1000);
+        
+      });
+
+      // $projectItem.find('.close-button').on('click', function() {
+      //   $(this).removeClass('expand');
+      // });
     }
+
   };
   
   HOME.init();
