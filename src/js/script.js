@@ -120,23 +120,8 @@ jQuery(function($) {
       var $projectItem = $('.project-item');
 
       $projectItem.on('click', function() {
-        var $this = $(this);
-        var $itemPostiion = $this.offset();
-
-        $this.css('position', 'absolute').animate({
-          top: 0,
-          left: 0
-        });
-
-        setTimeout(function() {
-          $this.toggleClass('expand');
-        }, 1000);
-        
+        $(this).find('.project-content').addClass('zoomOut');
       });
-
-      // $projectItem.find('.close-button').on('click', function() {
-      //   $(this).removeClass('expand');
-      // });
     }
 
   };
