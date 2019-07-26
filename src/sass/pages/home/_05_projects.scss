@@ -11,6 +11,8 @@
   }
 }
 
+// The individual project item
+// ========================================
 .project-item {
   flex: 1 0 auto;
   background-color: rgba($color-5, 1);
@@ -22,9 +24,35 @@
   padding: 2rem;
   transition: 0.7s ease;
 
-  .project-summary {}
+  .project-open {
+    font-size: 0;
+    background-color: transparent;
+    border: 0;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transition: 0.5s ease;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+
+    &::before {
+      content: '';
+      font-size: cre(32px);
+      @include font-icon('\e906');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 
   .project-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     background-color: $color-5;
     width: 100%;
     height: 100%;
@@ -32,30 +60,54 @@
     top: 0;
     left: 0;
     z-index: 1;
-    opacity: 0;
-    transform: scale3d(0, 0, 0);
 
     &.zoomOut {
-      animation: zoomOut 0.7s;
+      animation: zoomOut 0.5s;
       animation-fill-mode: forwards;
     }
 
     &.zoomIn {
-      animation: zoomIn 0.7s;
+      animation: zoomIn 0.5s;
       animation-fill-mode: forwards;
     }
-  }
-}
+  } // .project-content
 
+  .project-figure {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .project-details {
+    flex: 1;
+    max-width: 50%;
+  }
+
+  .project-close {
+    position: absolute;
+    top: cre(20px);
+    right: cre(20px);
+  }
+} // .project-item 
+
+// Keyframes
+// ===============================
 @keyframes zoomOut {
-  100% {
+  from {
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+  }
+  to {
     opacity: 1;
     transform: scale3d(1,1,1);
   }
 }
 
 @keyframes zoomIn {
-  100% {
+  from {
+    opacity: 1;
+    transform: scale3d(1,1,1);
+  }
+  to {
     opacity: 0;
     transform: scale3d(0, 0, 0);
   }
