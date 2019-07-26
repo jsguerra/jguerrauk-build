@@ -117,10 +117,17 @@ jQuery(function($) {
     // Project function
     // ==============================================
     projectItem: function() {
-      var $projectItem = $('.project-item');
+      var $projectOpen = $('.project-item').find('.project-open');
+      var $projectClose = $('.project-item').find('.project-close');
 
-      $projectItem.on('click', function() {
-        $(this).find('.project-content').addClass('zoomOut');
+      $projectOpen.on('click', function() {
+        $(this).parent().find('.project-content').addClass('zoomOut');
+        $(this).parent().find('.project-content').removeClass('zoomIn');
+      });
+
+      $projectClose.on('click', function() {
+        $(this).parent().removeClass('zoomOut');
+        $(this).parent().addClass('zoomIn');
       });
     }
 
