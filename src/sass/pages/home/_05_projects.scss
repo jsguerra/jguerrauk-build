@@ -60,7 +60,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 2s ease;
 
     &.zoomOut {
       // animation: zoomOut 0.5s;
@@ -78,11 +78,12 @@
   .project-image {
     flex: 1;
     max-width: 50%;
+    height: 100%;
 
     img {
       object-fit: cover;
       height: 100%;
-      max-height: cre(766px);
+      // max-height: cre(766px);
     }
   }
 
