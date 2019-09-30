@@ -7,17 +7,40 @@
   border: 1px solid $color-5;
   color: $color-5;
   padding: 0.5rem 2rem;
-  transform: scale(1);
+  // transform: scale(1);
   transition: 0.3s;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0px;
+    z-index: -1;
+    content: '';
+    color: #000 !important;
+    background: #F7CA18;
+    transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  }
 
   &:focus,
   &:hover {
     background-color: $color-5;
+    background-color: transparent;
     border-color: $color-5;
     color: black;
     text-decoration: none;
     // transform: scale(1.06);
     // box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+
+    &::before {
+      left: 0%;
+      right: auto;
+      width: 100%;
+    }
   }
 }
 
