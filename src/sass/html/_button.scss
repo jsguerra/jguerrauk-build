@@ -11,6 +11,7 @@
   transition: 0.3s;
   transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   position: relative;
+  z-index: 1;
 
   &::before {
     display: block;
@@ -50,18 +51,21 @@
   font-weight: 600;
   letter-spacing: 1px;
   background-color: $color-5;
+  border: 2px solid $color-5;
   box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
   color: black;
   padding: 0.5rem 2rem;
   text-transform: uppercase;
-  transform: scale(1);
+  // transform: scale(1);
   transition: 0.3s ease;
 
   &:focus,
   &:hover {
     background-color: darken($color-5, 5%);
+    border: 2px solid $color-5;
+    background-color: transparent;
     color: black;
     text-decoration: none;
-    transform: scale(1.06);
+    // transform: scale(1.06);
   }
 }
