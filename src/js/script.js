@@ -15,7 +15,7 @@ jQuery(function($) {
       this.heroParallax(),
       this.scrollDown(),
       this.scrollUp(),
-      this.animations(),
+      // this.animations(),
       this.mySkills(),
       this.projectItem();
     },
@@ -109,29 +109,33 @@ jQuery(function($) {
     mySkills: function() {
       var $skills = $('.skills');
       
-      $skills.waypoint(function() {
-        $('.skills-bar').addClass('animate-skill');
+      $skills.waypoint(function(direction) {
+        if (direction === 'down') {
+          $('.skills-bar').addClass('animate-skill');
+        } else {
+          $('.skills-bar').removeClass('animate-skill');
+        }
       }, { offset: '50%'});
     },
 
     // Project function
     // ==============================================
     projectItem: function() {
-      var $projectOpen = $('.project-item').find('.project-open');
-      var $projectClose = $('.project-item').find('.project-close');
+      // var $projectOpen = $('.project-item').find('.project-open');
+      // var $projectClose = $('.project-item').find('.project-close');
 
-      $projectOpen.on('click', function() {
-        $(this).parent().find('.project-content').addClass('zoomOut');
-        $(this).parent().find('.project-content').removeClass('zoomIn');
-        var $coordinates = $('#master-header').offset();
-        console.log($coordinates);
-        $(this).parent().find('.project-content').css('top', ($coordinates.top + 69) + 'px');
-      });
+      // $projectOpen.on('click', function() {
+      //   $(this).parent().find('.project-content').addClass('zoomOut');
+      //   $(this).parent().find('.project-content').removeClass('zoomIn');
+      //   var $coordinates = $('#master-header').offset();
+      //   console.log($coordinates);
+      //   $(this).parent().find('.project-content').css('top', ($coordinates.top + 69) + 'px');
+      // });
 
-      $projectClose.on('click', function() {
-        $(this).parent().removeClass('zoomOut');
-        $(this).parent().addClass('zoomIn');
-      });
+      // $projectClose.on('click', function() {
+      //   $(this).parent().removeClass('zoomOut');
+      //   $(this).parent().addClass('zoomIn');
+      // });
     }
 
   };
