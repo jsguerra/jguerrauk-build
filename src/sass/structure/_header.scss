@@ -26,6 +26,11 @@
   }
 }
 
+#masthead {
+  display: flex;
+  justify-content: space-between;
+}
+
 #site-logo {
   font-family: $font-family-1;
   font-size: 1.5rem;
