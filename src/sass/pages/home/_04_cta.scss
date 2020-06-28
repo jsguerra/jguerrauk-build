@@ -3,7 +3,6 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/jose-guerra-typing.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,6 +10,14 @@
   padding: 2rem 0;
   min-height: cre(300px);
   position: relative;
+
+  .no-webp & {
+    background-image: url('/images/jose-guerra-typing.jpg');
+  }
+
+  .webp & {
+    background-image: url('/images/jose-guerra-typing.webp');
+  }
 
   &::before {
     content: '';
