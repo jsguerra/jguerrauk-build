@@ -18,7 +18,8 @@ jQuery(function($) {
         this.scrollUp(),
         // this.animations(),
         this.mySkills(),
-        this.projectItem();
+        this.projectItem(),
+        this.dateUpdate();
       }
     },
 
@@ -138,8 +139,18 @@ jQuery(function($) {
       //   $(this).parent().removeClass('zoomOut');
       //   $(this).parent().addClass('zoomIn');
       // });
-    }
+    },
 
+    // Project function
+    // ==============================================
+    dateUpdate: function() {
+      var $date = $('.copyright-date');
+
+      var $year = new Date();
+      var $currentYear = $year.getFullYear();
+
+      $date.text($currentYear);
+    }
   };
   
   HOME.init();
