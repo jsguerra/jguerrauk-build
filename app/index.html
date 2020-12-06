@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js">
+<html lang="en-US">
   <head>
     <!-- General meta tags needed-->
     <meta charset="utf-8">
@@ -40,11 +40,6 @@
     
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css?v=20200628">
-    
-    <!-- If javascript enabled remove no-js class -->
-    <script>
-      document.documentElement.classList.remove("no-js");
-    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-33763059-10"></script>
@@ -58,19 +53,19 @@
 
   </head>
   <body id="home">
-    <header id="master-header">
+    <header id="site-header">
       <div class="container">
-          <span id="site-logo">JG.</span>
-          <ul class="social-links">
-            <li><a class="icon github" href="https://github.com/jsguerra" target="_blank">github</a></li>
-            <li><a class="icon codepen" href="https://codepen.io/jguerra/" target="_blank">codepen</a></li>
-            <li><a class="icon linkedin" href="https://www.linkedin.com/in/jsguerra/" target="_blank">linkedin</a></li>
-          </ul>
+        <span id="site-logo">JG.</span>
+        <ul class="social-links">
+          <li><a class="icon github" href="https://github.com/jsguerra" target="_blank">github</a></li>
+          <li><a class="icon codepen" href="https://codepen.io/jguerra/" target="_blank">codepen</a></li>
+          <li><a class="icon linkedin" href="https://www.linkedin.com/in/jsguerra/" target="_blank">linkedin</a></li>
+        </ul>
       </div>
     </header>
 
     <main id="main">
-      <div class="hero-treatment">
+      <div class="hero">
         <div class="container">
 
           <div class="welcome">
@@ -80,12 +75,11 @@
             <p><a class="button-cta" href="mailto:me@joseguerra.uk">Contact Me</a></p>
           </div> <!-- .welcome -->
 
-          <div class="hero-background"></div>
-
           <button class="scroll-down">Click to Scroll Down</button>
           
         </div> <!-- .container -->
-      </div> <!-- .hero-treatment -->
+        <div class="hero-bg"></div>
+      </div> <!-- .hero -->
 
       <div class="about-me">
         <div class="container">
@@ -245,12 +239,12 @@
         </div> <!-- .project__grid -->
 
       </section> <!-- .projects -->
-
-      <footer id="master-footer">
-        <p>&copy; <span class="copyright-date">2019</span> Jose Guerra: Front End Developer</p>
-        <button class="scroll-up">Scroll up</button>
-      </footer>
     </main>
+
+    <footer id="site-footer">
+      <p>&copy; <span class="copyright-date">2019</span> Jose Guerra: Front End Developer</p>
+      <button class="scroll-up">Scroll up</button>
+    </footer>
 
   <!-- JavaScript File -->
 
