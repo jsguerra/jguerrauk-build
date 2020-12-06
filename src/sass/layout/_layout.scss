@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased; // all webkit
+  -moz-osx-font-smoothing: grayscale; // firefox
+}
+
+body {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $body-color;
+}
+
+.container {
+  width: 100%;
+  max-width: 118rem;
+  margin: 0 auto;
+}

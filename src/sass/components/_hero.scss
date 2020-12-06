@@ -1,0 +1,34 @@
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.45), rgba(0,0,0,0.5));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+  }
+}
+
+.hero-bg {
+  background-image: url('images/jose-guerra-front-end-developer.jpg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
