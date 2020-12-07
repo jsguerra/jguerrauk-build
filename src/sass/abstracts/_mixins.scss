@@ -39,6 +39,25 @@
     }
 }
 
+// ================================
+// Button Reset
+// ================================
+
+// Example usage:
+// .trigger {
+//    @include button-reset;
+// }
+
+@mixin button-reset($complete: true) {
+  border: 0;
+  background-color: none;
+
+  @if $complete {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 // Font Icons
 // ================================
 
