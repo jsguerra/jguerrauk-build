@@ -54,27 +54,28 @@ const styles = (cb) => {
 // Javascript task
 const scripts = (cb) => {
   return src(js + '**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: [
-        [
-          '@babel/env',
-          {
-            "useBuiltIns": "usage",
-            "corejs": "3",
-            "targets": {
-              "browsers": [
-                "last 5 versions",
-                "ie >= 8"
-              ]
-            }
-          }
-        ]
-      ]
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
+    // .pipe(sourcemaps.init())
+    // .pipe(babel({
+    //   presets: [
+    //     [
+    //       '@babel/env',
+    //       {
+    //         "useBuiltIns": "usage",
+    //         "corejs": "3",
+    //         "targets": {
+    //           "browsers": [
+    //             "last 5 versions",
+    //             "ie >= 8"
+    //           ]
+    //         }
+    //       }
+    //     ]
+    //   ]
+    // }))
+    // .pipe(sourcemaps.write())
+    // .pipe(uglify())
+    // .pipe(rename({suffix: '.min'}))
+    .pipe(babel({presets: ['@babel/preset-env'] })) 
     .pipe(dest(app + '/js/'))
 
   cb();
