@@ -1,0 +1,20 @@
+.section-2 {
+  background-color: $color-2;
+  padding: 8rem 0;
+  text-align: center;
+
+  > p {
+    margin-bottom: 4rem;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .content-entry {
+    max-width: 49%;
+    text-align: left;
+  }
+}
